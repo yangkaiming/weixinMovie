@@ -1,0 +1,13 @@
+<!--pages/main/main.wxml-->
+<view>
+  <text>我最喜欢</text>
+  <!-- <button type="default" bindtap="playMusic"> {{tips}} </button>
+  <view>
+    <view wx:for="{{songLists}}" wx:key="item._id">
+      <image style="width: 200px; height: 200px; " src="{{ip+item.img}}" bindtap="play"></image>
+      <text>{{item.usename}}</text>
+      <text>{{item.name}}</text>
+    </view>
+
+  </view> -->
+</view>

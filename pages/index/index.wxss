@@ -1,0 +1,125 @@
+/**index.wxss**/
+
+.movieTop {
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px solid gainsboro;
+  height: 80rpx;
+  align-items: center;
+}
+
+.movieTop>text {
+  font-size: 28rpx;
+  color: gray;
+}
+
+.search {
+  border-left: 1px solid gainsboro;
+  padding-left: 20rpx;
+}
+
+.movieHot>text {
+  margin-right: 50rpx;
+  font-size: 30rpx;
+}
+
+.movieAll {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 200rpx;
+  align-items: center;
+  border-bottom: 1px solid gainsboro;
+  padding: 0 20rpx;
+}
+
+.images {
+  margin-right: 20rpx;
+}
+
+.movieName>view:not(:first-child) {
+  color: grey;
+  font-size: 24rpx;
+}
+
+.movieName {
+  width: 61%;
+}
+
+.movieName>view:first-child {
+  font-size: 32rpx;
+}
+
+.shopMovie>view:first-child {
+  color: orange;
+  font-size: 22rpx;
+  margin-bottom: 30rpx;
+  margin-left: 0;
+}
+.peoples{
+  font-size: 16rpx;
+}
+.shopMovie {
+  width: 160rpx;
+}
+
+.red {
+  font-size: 24rpx;
+  background: red;
+  color: white;
+  padding: 10rpx 18rpx;
+  border-radius: 10rpx;
+}
+
+.blue {
+  font-size: 24rpx;
+  background: #6baee6;
+  color: white;
+  padding: 10rpx 18rpx;
+  border-radius: 10rpx;
+}
+
+/* 热映 */
+
+.movieHot .item {
+  position: relative;
+}
+
+.movieHot .item.active {
+  color: #ef4238;
+}
+.movieHot .item.active:after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -10rpx;
+  left: 0;
+  right: 0;
+  height: 3rpx;
+  background: #ef4238;
+}
+.remove_one{
+  font-size: 28rpx;
+  width: 190rpx;  
+}
+.remove_two{
+  font-size: 24rpx;
+  color: gray;
+  width: 180rpx;
+
+}
+.text_top{
+  font-size: 30rpx;
+}
+.scroll-view_H{
+  display: flex;
+  white-space: nowrap;
+  height: 410rpx;
+  border-bottom: 1px solid gainsboro;
+}
+.new_top{
+  display: inline-block
+}
+.scroll-view_H image{
+  margin: 10rpx;
+}

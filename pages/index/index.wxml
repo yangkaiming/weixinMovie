@@ -1,0 +1,68 @@
+<!--index.wxml-->
+<view>
+
+  <view class='movieTop'>
+    <text bindtap='down'>成都</text>
+    <view class='movieHot'>
+      <text wx:for="{{moveHot}}" data-id="{{index}}" class="item {{currentTab==index ? 'active' : ''}}" wx:key="unique" bindtap="navbarTap">{{item}}</text>
+    </view>
+    <view class='search'>
+      <icon type="search" size="20" color="red" />
+    </view>
+  </view>
+
+  <view wx:for="{{movieList}}" wx:key="item._id" class='movieAll' hidden="{{currentTab!==0}}">
+    <view class='images'>
+      <image style="width: 150rpx; height: 180rpx; " src="{{ip+item.video}}" data-ids="{{item._id}}" bindtap="movieDown"></image>
+    </view>
+    <view class='movieName'>
+      <view>{{item.name}}</view>
+      <view>{{item.type}}</view>
+      <view>主演:{{item.actor}}</view>
+      <view wx:if='{{item.show_time}}'>今天167家影院放映246场</view>
+      <view wx:else>{{item.activeText}}</view>
+    </view>
+    <view class='shopMovie'>
+      <view wx:if="{{item.change}}">{{item.userscore}}分</view>
+      <view wx:else>{{item.ticket}}
+        <text class='peoples'>人想看</text> </view>
+      <view>
+        <a wx:if='{{item.showtime}}' class='red' href='#'>购票</a>
+        <a wx:else class='blue' href='#'>预售</a>
+      </view>
+    </view>
+  </view>
+  <!--待映-->
+  <view hidden="{{currentTab!==1}}">
+    <text class='text_top'>近期最受欢迎</text>
+    <scroll-view class="scroll-view_H" scroll-x style="width: 100%">
+      <view wx:for="{{movieWill}}" wx:key="item._id" class='new_top'>
+        <image style="width: 180rpx; height: 230rpx; " src="{{ip+item.video}}" data-ids="{{item._id}}" bindtap="movieDown"></image>
+        <view class='remove_one'>{{item.name}}</view>
+        <view class='remove_two'>{{item.ticket}}人想看</view>
+        <view class='remove_two'  style='overflow:hidden;white-space:nowrap;width:150rpx;text-overflow:ellipsis'>{{item.show}}</view>
+      </view>
+    </scroll-view>
+    <view style='width:100%;height:18rpx;background:gainsboro'></view>
+    <text class='text_top'>{{data}}更新</text>
+    <view wx:for="{{movieWill}}" wx:key="item._id" class='movieAll'>
+      <view class='images'>
+        <image style="width: 150rpx; height: 180rpx; " src="{{ip+item.video}}" data-ids="{{item._id}}" bindtap="movieDown"></image>
+      </view>
+      <view class='movieName'>
+        <view>{{item.name}}</view>
+        <view>{{item.type}}</view>
+        <view>主演:{{item.actor}}</view>
+        <view>{{item.show}}</view>
+      </view>
+      <view class='shopMovie'>
+        <view wx:if="{{item.willshow}}">{{item.userscore}}分</view>
+        <view wx:else>{{item.peopleNum}}
+          <text class='peoples'>人想看</text> </view>
+        <view>
+          <a class='blue' href='#'>预售</a>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

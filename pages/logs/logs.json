@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "欢迎来到小程序课程",
+      "list": [
+        {
+          "pagePath": "pages/index/index",
+          "text": "电影",
+          "color": "black"
+        }
+      ]
+}

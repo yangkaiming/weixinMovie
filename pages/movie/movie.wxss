@@ -1,0 +1,143 @@
+.info_back {
+  width: 100%;
+  height: 390rpx;
+  background-repeat: no-repeat;
+  -webkit-filter: blur(20px);
+  position: relative;
+}
+
+.info_top {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.info_top image {
+  margin-right: 28rpx;
+}
+
+.info {
+  position: absolute;
+  z-index: 1;
+  top: 20rpx;
+  left: 20rpx;
+  width: 100%;
+}
+
+.info_name>view:nth-child(1) {
+  color: white;
+  font-size: 30rpx;
+}
+
+.info_name>view:nth-child(2) {
+  color: white;
+  font-size: 18rpx;
+}
+
+.info_name>view:nth-child(3) {
+  color: orange;
+  font-size: 26rpx;
+  margin: 20rpx 0;
+}
+
+.info_name>view:nth-child(4) {
+  color: gainsboro;
+  font-size: 24rpx;
+}
+
+.info_name>view:nth-child(6) {
+  color: gainsboro;
+  font-size: 24rpx;
+}
+
+.info_name>view:nth-child(5) {
+  color: gainsboro;
+  font-size: 24rpx;
+}
+
+.btnDown>a {
+  background: grey;
+  color: white;
+  height: 40rpx;
+  font-size: 30rpx;
+  padding: 10rpx 138rpx;
+  opacity: 0.6;
+  margin-left: 20rpx;
+}
+
+.btnDown {
+  display: flex;
+  margin-top: 28rpx;
+  width: 100%;
+}
+
+.info_comment>view {
+  width: 100%;
+  background: white;
+  font-size: 32rpx;
+  margin-top: 34rpx;
+  overflow: hidden;
+}
+
+#infoBtnn:checked view {
+  height: auto;
+}
+
+#infoBtnn:checked label>image {
+  transform: rotate(180deg);
+}
+.scroll-view_H{
+  display: flex;
+  white-space: nowrap;
+  height: 320rpx;
+  border-bottom: 1px solid gainsboro;
+  margin-top: 10rpx;
+}
+.new_top{
+  display: inline-block
+}
+.scroll-view_H image{
+  margin: 10rpx;
+}
+.actor_name{
+  font-size: 24rpx;
+  text-align: center
+}
+.actor_one{
+  font-size: 20rpx;
+  color: gray;
+  text-align: center  
+}
+.ticket{
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  justify-content: space-around;
+}
+.color{
+  color: red;
+  font-size: 30rpx;
+  text-align: center;
+  margin-bottom: 10rpx;
+}
+.color_one{
+  color: gray;
+  font-size: 24rpx;
+  text-align: center;
+}
+.scroll-view_H1{
+  display: flex;
+  white-space: nowrap;
+  height: 230rpx;
+  border-bottom: 1px solid gainsboro;
+  margin-top: 10rpx;
+}
+.scroll-view_H1 image{
+  margin: 10rpx;
+}
+.comment{
+  margin-top: 20rpx;
+  border-bottom: 1px solid gainsboro;
+  font-size: 32rpx;
+  padding-bottom: 20rpx;
+}

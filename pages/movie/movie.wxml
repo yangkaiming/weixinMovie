@@ -1,0 +1,77 @@
+<!--pages/movie/movie.wxml-->
+<view>
+  <view>
+    <view class='info_back' style='background-image:url({{ip+infoMovie.video}})'>
+    </view>
+    <view class='info'>
+      <view class='info_top'>
+        <view>
+            <image style="width: 200rpx; height: 250rpx; " src="{{ip+infoMovie.video}}"></image>  
+        </view>
+        <view class='info_name'>
+          <view>{{infoMovie.name}}</view>
+          <view>{{infoMovie.ename}}</view>
+          <view>{{infoMovie.userscore}}分</view>
+          <view>{{infoMovie.type}}</view>
+          <view>{{infoMovie.area}}{{infoMovie.time}}</view>
+          <view>{{infoMovie.show}}</view>
+        </view>
+      </view>
+      <view class='btnDown'>
+        <a href="#"> 想看 </a>
+        <a href="#">评分</a>
+      </view>
+    </view>
+  </view>
+  <view class='info_comment'>
+    <view>{{infoMovie.intro}}</view>
+  </view>
+  <view style='background:gainsboro;width:100%;height:20rpx;'></view>
+  <view class='acutor'>
+    <view>演员人员</view>
+    <scroll-view class="scroll-view_H" scroll-x style="width: 100%">
+      <view wx:for="{{imgList}}" wx:key="index" class='new_top'>
+        <image style="width: 150rpx; height: 200rpx; " src="{{ip+item}}"></image>
+        <view class='actor_name'>{{infoMovie.director}}</view>
+        <view class='actor_one'>导演</view>
+      </view>
+      <view wx:for="{{imgsList}}" wx:key="index" class='new_top'>
+        <image style="width: 150rpx; height: 200rpx; " src="{{ip+item}}"></image>
+        <view class='actor_name'>{{actorList[index]}}</view>
+        <view class='actor_one'>演员</view>
+      </view>
+    </scroll-view>
+  </view>
+  <view style='background:gainsboro;width:100%;height:20rpx;'></view>
+  <view>
+    <view>票房</view>
+    <view class='ticket'>
+      <view>
+        <view class='color'>1</view>
+        <view class='color_one'>昨日票房排行</view>
+      </view>
+      <view>
+        <view class='color'>{{infoMovie.ticket}}</view>
+        <view class='color_one'>首周票房</view>
+      </view>
+      <view>
+        <view class='color'>{{infoMovie.ticket}}</view>
+        <view class='color_one'>首周票房</view>
+      </view>
+    </view>
+  </view>
+  <view style='background:gainsboro;width:100%;height:20rpx;'></view>
+  <view>
+    <view style='margin-top:20rpx'>视频和剧照</view>
+    <scroll-view class="scroll-view_H1" scroll-x style="width: 100%">
+      <view wx:for="{{img}}" wx:key="index" class='new_top'>
+        <image style="width: 260rpx; height: 180rpx; " src="{{ip+item}}"></image>
+      </view>
+    </scroll-view>
+  </view>
+  <view style='background:gainsboro;width:100%;height:20rpx;'></view>
+  <view>
+    <view style='margin-top:20rpx;border-bottom:1px solid gainsboro;height:80rpx;'>观众评论</view>
+    <view wx:for="{{comment}}" class='comment' wx:key="item._id">{{item}}</view>
+  </view>
+</view>
